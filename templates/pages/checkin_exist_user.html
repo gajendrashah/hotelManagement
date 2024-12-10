@@ -1,0 +1,12 @@
+  {% for fields in form.visible_fields %}
+  <div class="col-6">
+      {{ fields.errors }}
+      {{ fields.label_tag }}
+      {{ fields }}
+  </div>
+  {% endfor %}
+  <div class="col-6" style="display:none;">
+      {% for field in form.hidden_fields %}
+      <div style="display:none;">{{ field }}</div>
+      {% endfor %}
+
